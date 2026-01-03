@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  This is my personal website made with Zola.
+</h1>
+<p><a href="{{ get_url(path='/') }}">Carolyn Zech</a></p>
+<p><a href="{{ get_url(path='@/news/_index.md') }}">News</a></p>
+<p><a href="{{ get_url(path='@/pubs/_index.md') }}">Publications</a></p>
+{% endblock content %}
