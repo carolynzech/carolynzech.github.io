@@ -4,7 +4,26 @@
 <h1 class="title">
   This is my personal website made with Zola.
 </h1>
-<p><a href="{{ get_url(path='/') }}">Carolyn Zech</a></p>
-<p><a href="{{ get_url(path='@/news/_index.md') }}">News</a></p>
-<p><a href="{{ get_url(path='@/pubs/_index.md') }}">Publications</a></p>
+
+<section>
+  <div >
+    {% set page = get_section(path="about/_index.md") %}
+    {{ page.content | safe }}
+  </div>
+</section>
+
+<section>
+   <div class="news">
+    <!-- this is where whichever entries you want to show on the home page go -->
+    <!-- then you can link to a separate "all entries" page here -->
+  </div>
+</section>
+
+<section>
+   <div class="publications">
+    <!-- this is where whichever entries you want to show on the home page go -->
+    <!-- then you can link to a separate "all entries" page here -->
+  </div>
+</section>
+
 {% endblock content %}
