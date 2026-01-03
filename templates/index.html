@@ -1,12 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  This is my personal website made with Zola.
-</h1>
+<section>
+  <div class="header">
+    <h2>PhD Student</h3>
+    <h3>Massachusetts Institute of Technology</h3>
+    <h3>Computer Science & Artificial Intelligence Laboratory</h3>
+  </div>
+  <!-- todo: add github, email, linkedin icons -->
+   {% set headshot = resize_image(path='/img/headshot.png', width=400, height=400, op="fit_width") %}
+   <img src="{{ headshot.url }}" />
+</section>
 
 <section>
-  <div >
+  <div class="about">
     {% set page = get_section(path="about/_index.md") %}
     {{ page.content | safe }}
   </div>
