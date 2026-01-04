@@ -1,0 +1,113 @@
+$mit-red: #A31F34;
+$github-black: #24292e;
+$linkedin-blue: #0077b5;
+
+.header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+
+    &-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+
+        @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+        }
+    }
+
+    &-info {
+        flex: 1;
+        .header-name {
+            font-size: 2.8rem;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.1;
+            color: #000000;
+        }
+
+        .header-title {
+            font-size: 1.4rem;
+            margin: 0;
+            color: $mit-red;
+            font-weight: 600;
+        }
+
+        .header-affiliation, .header-lab {
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 400;
+            color: #000000;
+        }
+    }
+
+    &-contact {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        margin-top: 0.5em;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+
+        .header-email {
+            .email-container {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                text-decoration: none;
+                color: #555;
+                
+                transition: color 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    color: $mit-red;
+                }
+            }
+
+            .fa-envelope {
+                font-size: 1.6rem;
+            }
+
+            .email-text {
+                font-weight: 500;
+            }
+            
+        }
+
+        .header-links {
+            display: flex;
+            gap: 1em;
+
+            .social-icon {
+                font-size: 1.6rem;
+                color: #555;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    
+                    .fa-github:hover { color: $github-black; }
+                    .fa-linkedin:hover { color: $linkedin-blue; }
+                }
+            }
+        }
+    }
+
+    &-image-container {
+        .headshot {
+            display: block;
+            width: 220px;
+            height: 220px;
+            border-radius: 10% 10%;
+            border: 2px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    }
+}

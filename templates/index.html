@@ -2,15 +2,35 @@
 {% import "macros.html" as macros %}
 
 {% block content %}
-<section>
-  <div class="header">
-    <h2>PhD Student</h3>
-    <h3>Massachusetts Institute of Technology</h3>
-    <h3>Computer Science & Artificial Intelligence Laboratory</h3>
+<section class="header">
+  <div class="header-container">
+    <div class="header-info">
+      <h1 class="header-name">Carolyn Zech</h1>
+      <h2 class="header-title">PhD Candidate</h2>
+      <h3 class="header-affiliation">Massachusetts Institute of Technology</h3>
+      <h3 class="header-lab">Computer Science & Artificial Intelligence Laboratory</h3>
+      <div class="header-contact">
+        <div class="header-links">
+          <a href="https://github.com/carolynzech" class="social-icon" title="GitHub" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/carolynzech" class="social-icon" title="LinkedIn" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="header-email">
+          <a href="mailto:czech@mit.edu" class="email-container">
+            <i class="fa fa-envelope"></i>
+            <span class="email-text">czech@mit.edu</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-image-container">
+      {% set headshot = resize_image(path='/img/headshot.png', width=400, height=400, op="fit_width") %}
+      <img src="{{ headshot.url }}" class="headshot" />
+    </div>
   </div>
-  <!-- todo: add github, email, linkedin icons -->
-   {% set headshot = resize_image(path='/img/headshot.png', width=400, height=400, op="fit_width") %}
-   <img src="{{ headshot.url }}" />
 </section>
 
 <section>

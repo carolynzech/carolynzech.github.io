@@ -5,18 +5,14 @@
   <meta charset="utf-8">
   <meta name="author" content="Carolyn Zech">
   <title>Carolyn Zech</title>
+  <link defer rel="stylesheet" href={{ get_url(path="style.css" ) }}>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
 <body>
-  <h1 class="name">Carolyn Zech</h1>
+  {% block content %} {% endblock content %}
 
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock content %}
-    </div>
-  </section>
-
-  <div id="footer">
+  <div class="footer">
       &copy; Copyright 2025 by Carolyn Zech; built with <a href="https://www.getzola.org/">Zola</a>
   </div>
 </body>
