@@ -1,0 +1,20 @@
+{% macro author(name) %}
+{%- if name == "Carolyn Zech" -%}
+<span class="author"><strong>{{ name }}</strong></span>
+{%- else -%}
+<span class="author">{{ name }}</span>
+{%- endif -%}
+{% endmacro author %}
+
+<!-- TODO: add a button for the external link url -->
+{% macro title(text, pdf) %}
+    <span class="title"><a href={{ pdf }}>{{ text }}: </a></span>
+{% endmacro title %}
+
+{% macro publication(pub) %}
+{{ macros::title(text=pub.title, pdf=pub.extra.pdf) }}
+{{pub.date}}
+{% for name in pub.extra.authors %}
+    {{ macros::author(name=name) }}{% if not loop.last %}, {% endif %}
+{% endfor %}
+{% endmacro publication %}
