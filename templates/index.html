@@ -22,10 +22,13 @@
 
 <section>
   {% set news = get_section(path="news/_index.md") %}
+  <h2>{{news.title}}</h2>
+  {{ news.content | safe }}
 </section>
 
 <section>
   {% set publications = get_section(path="publications/_index.md") %}
+  <h2>Publications</h2>
   {% for pub in publications.pages | sort(attribute="date") | reverse %}
   {{ macros::publication(pub=pub) }}
   {% endfor %}
