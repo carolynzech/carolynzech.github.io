@@ -2,6 +2,9 @@
 title = "Landing page"
 +++
 
-Hello! I am Carolyn. Eventually, a full bio will live here.
+I am a PhD student in the [FLAME](https://flame.csail.mit.edu/) lab at MIT, advised by [Rachit Nigam](https://people.csail.mit.edu/rachit/).
+My research focuses on programming languages and formal verification for hardware design.
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+Previously, I was a software engineer for the [Kani](https://github.com/model-checking/kani) model checker at Amazon.
+
+I received my ScB in Computer Science from Brown University, where I worked on static program analysis with [Malte Schwarzkopf](https://cs.brown.edu/people/malte/) and [Shriram Krishnamurthi](https://cs.brown.edu/~sk/) in the [ETOS](https://etos.cs.brown.edu/) group.

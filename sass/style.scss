@@ -123,6 +123,10 @@ body {
 
 .about {
   font-size: 1.2rem;
+  a {
+    color: $black;
+    text-decoration: dotted underline;
+  }
 }
 
 .section-title {
