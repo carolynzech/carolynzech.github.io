@@ -3,6 +3,11 @@ $blue: #0077b5;
 $grey: #555;
 $accent: #4435a8;
 
+a {
+  color: $black;
+  text-decoration: dotted underline;
+}
+
 body {
   background-color: #FCFCFC;
   font-family: "DM Sans", sans-serif;
@@ -123,15 +128,10 @@ body {
 
 .about {
   font-size: 1.2rem;
-  a {
-    color: $black;
-    text-decoration: dotted underline;
-  }
 }
 
 .section-title {
   display: inline-flex;
-  margin-bottom: 1rem;
 
   // to make the line gradient instead, comment this in
   // background-image: linear-gradient(to right, $accent, rgba($accent, 0.2));
@@ -147,10 +147,6 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  a {
-    text-decoration: none;
-    color: $blue
-  }
 }
 
 .pub-entry {
@@ -236,13 +232,13 @@ body {
 
 .news {
   .section-title {
-    margin-bottom: 0; 
+    margin: 0.5rem 0 0 0; 
   }
 
   .news-list {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem; // Space between different news entries
+    gap: 1rem; // Space between different news entries
     margin-top: 1.5rem;
   }
 
