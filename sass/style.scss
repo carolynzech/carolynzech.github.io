@@ -112,7 +112,7 @@ body {
       width: 220px;
       height: 220px;
       border-radius: 10% 10%;
-      border: 2px solid white;
+      border: 2px solid $accent;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
   }
@@ -126,7 +126,9 @@ body {
   display: inline-flex;
   margin-bottom: 1rem;
 
-  background-image: linear-gradient(to right, $accent, rgba($accent, 0.2));
+  // to make the line gradient instead, comment this in
+  // background-image: linear-gradient(to right, $accent, rgba($accent, 0.2));
+  background-image: linear-gradient(to right, $accent, $accent);
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 0.3rem; 
