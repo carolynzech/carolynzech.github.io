@@ -39,6 +39,12 @@
           <i class="fa-solid fa-arrow-up-right-from-square"></i> USENIX
         </a>
       {% endif %}
+
+      {% if pub.extra.code %}
+        <a href="{{ pub.extra.code }}" class="pub-btn pub-btn--link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-code"></i> Code
+        </a>
+      {% endif %}
     </div>
   </div>
 </div>

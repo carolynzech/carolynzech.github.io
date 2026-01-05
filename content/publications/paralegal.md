@@ -17,4 +17,5 @@ authors = [
 conf = "OSDI 2025"
 acm = "https://dl.acm.org/doi/10.5555/3767901.3767953"
 pdf = "/papers/paralegal.pdf"
+code = "https://github.com/brownsys/paralegal"
 +++
