@@ -43,3 +43,14 @@
   </div>
 </div>
 {% endmacro publication %}
+
+{% macro news_entry(item) %}
+<div class="news-item">
+  <div class="news-date">
+    {{ item.date | date(format="%b %Y") }}
+  </div>
+  <div class="news-body">
+    {{ item.content | safe }}
+  </div>
+</div>
+{% endmacro news_entry %}

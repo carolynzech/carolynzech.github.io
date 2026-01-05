@@ -26,8 +26,7 @@
       </div>
     </div>
     <div class="header-image-container">
-      {% set headshot = resize_image(path='/img/headshot.png', width=600, height=600) %}
-      <img src="{{ headshot.url }}" class="headshot" />
+      <img src="/img/headshot.png" class="headshot" />
     </div>
   </div>
 </section>
@@ -41,8 +40,12 @@
 
 <section class="news">
   {% set news = get_section(path="news/_index.md") %}
-  <h2 class="section-title">{{news.title}}</h2>
-  <div class="news-content">{{ news.content | safe }}</div>
+  <h2 class="section-title">{{ news.title }}</h2>
+  <div class="news-list">
+    {% for item in news.pages | sort(attribute="date") | reverse %}
+    {{ macros::news_entry(item=item) }}
+    {% endfor %}
+  </div>
 </section>
 
 <section>
