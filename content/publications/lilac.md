@@ -1,6 +1,6 @@
 +++
 title = "Parameterized Hardware Design with Latency-Abstract Interfaces"
-date = 2025-03-22
+date = 2026-03-22
 
 [extra]
 authors = [
@@ -12,6 +12,6 @@ authors = [
     "Adrian Sampson"
 ]
 conf = "ASPLOS 2026"
-url = ""
-pdf = "static/papers/lilac.pdf"
+# acm = ""
+# pdf = "static/papers/lilac.pdf"
 +++

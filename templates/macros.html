@@ -1,20 +1,45 @@
 {% macro author(name) %}
-{%- if name == "Carolyn Zech" -%}
-<span class="author"><strong>{{ name }}</strong></span>
-{%- else -%}
-<span class="author">{{ name }}</span>
-{%- endif -%}
+  {%- if name == "Carolyn Zech" -%}
+    <span class="pub-author pub-author--me">{{ name }}</span>
+  {%- else -%}
+    <span class="pub-author">{{ name }}</span>
+  {%- endif -%}
 {% endmacro author %}
 
-<!-- TODO: add a button for the external link url -->
-{% macro title(text, pdf) %}
-    <span class="title"><a href={{ pdf }}>{{ text }}: </a></span>
-{% endmacro title %}
-
 {% macro publication(pub) %}
-{{ macros::title(text=pub.title, pdf=pub.extra.pdf) }}
-{{pub.date}}
-{% for name in pub.extra.authors %}
-    {{ macros::author(name=name) }}{% if not loop.last %}, {% endif %}
-{% endfor %}
+<div class="pub-entry">
+  <div class="pub-title">
+    {% if pub.extra.pdf %}
+    <a href="{{ pub.extra.pdf }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+    {% else %}
+    {{ pub.title }}
+    {% endif %}
+  </div>
+  
+  <div class="pub-authors">
+    {% for name in pub.extra.authors %}
+      {{ macros::author(name=name) }}{% if not loop.last %}, {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="pub-meta">
+    <span class="pub-conf">{{ pub.extra.conf }}</span>
+    
+    <div class="pub-buttons">
+      {% if pub.extra.proceedings %}
+        <a href="{{ pub.extra.proceedings }}" class="pub-btn pub-btn--link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Proceedings
+        </a>
+      {% elif pub.extra.acm %}
+        <a href="{{ pub.extra.acm }}" class="pub-btn pub-btn--link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> ACM
+        </a>
+      {% elif pub.extra.usenix %}
+        <a href="{{ pub.extra.usenix }}" class="pub-btn pub-btn--link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> USENIX
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
 {% endmacro publication %}

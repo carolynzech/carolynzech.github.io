@@ -15,6 +15,6 @@ authors = [
     "Malte Schwarzkopf"
 ]
 conf = "OSDI 2025"
-url = "https://dl.acm.org/doi/10.5555/3767901.3767953"
+acm = "https://dl.acm.org/doi/10.5555/3767901.3767953"
 pdf = "/papers/paralegal.pdf"
 +++

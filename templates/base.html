@@ -6,15 +6,17 @@
   <meta name="author" content="Carolyn Zech">
   <title>Carolyn Zech</title>
   <link defer rel="stylesheet" href={{ get_url(path="style.css" ) }}>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  {% block content %} {% endblock content %}
-
-  <div class="footer">
-      &copy; Copyright 2025 by Carolyn Zech; built with <a href="https://www.getzola.org/">Zola</a>
-  </div>
+    {% block content %} {% endblock content %}
+    <div class="footer">
+      <p>&copy 2025 Carolyn Zech; built with <a href="https://www.getzola.org/" target="_blank">Zola</a></p>
+    </div>
 </body>
 
 </html>

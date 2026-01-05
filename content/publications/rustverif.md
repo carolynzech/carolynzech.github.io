@@ -19,6 +19,6 @@ authors = [
     "Artem Agvanian"
 ]
 conf = "VSTTE 2024"
-url = "https://www.soundandcomplete.org/vstte2024.html"
+proceedings = "https://www.soundandcomplete.org/vstte2024.html"
 pdf = "/papers/rustverif.pdf"
 +++
