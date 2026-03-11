@@ -13,5 +13,5 @@ authors = [
 ]
 conf = "ASPLOS 2026"
 acm = "https://dl.acm.org/doi/10.1145/3779212.3790199"
-# pdf = "static/papers/lilac.pdf"
+pdf = "/papers/lilac.pdf"
 +++
