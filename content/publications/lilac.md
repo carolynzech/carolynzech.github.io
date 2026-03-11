@@ -12,6 +12,6 @@ authors = [
     "Adrian Sampson"
 ]
 conf = "ASPLOS 2026"
-# acm = ""
+acm = "https://dl.acm.org/doi/10.1145/3779212.3790199"
 # pdf = "static/papers/lilac.pdf"
 +++
