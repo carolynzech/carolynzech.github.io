@@ -3,7 +3,6 @@ author = "Carolyn Zech"
 compile_sass = true
 
 [markdown]
-highlight_code = true
 smart_punctuation = true
 external_links_target_blank = true
 external_links_no_referrer = true
