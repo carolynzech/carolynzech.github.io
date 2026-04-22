@@ -148,6 +148,21 @@ body {
   font-size: 2rem;
 }
 
+.subsection-title {
+  font-weight: 500;
+  font-size: 1rem;
+  color: $grey;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 1.75rem 0 0.75rem 0;
+
+  &--first {
+    margin-top: 0.75rem;
+  }
+  border-bottom: 1px solid lighten($grey, 30%);
+  padding-bottom: 0.3rem;
+}
+
 .footer {
   display: flex;
   justify-content: center;

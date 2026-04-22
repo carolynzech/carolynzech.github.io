@@ -19,6 +19,7 @@ authors = [
     "Artem Agvanian"
 ]
 conf = "VSTTE 2024"
+venue_type = "workshop"
 proceedings = "https://www.soundandcomplete.org/vstte2024.html"
 pdf = "/papers/rustverif.pdf"
 +++

@@ -51,8 +51,19 @@
 <section>
   {% set publications = get_section(path="publications/_index.md") %}
   <h2 class="section-title">Publications</h2>
+
+  <h3 class="subsection-title subsection-title--first">Conferences</h3>
   {% for pub in publications.pages | sort(attribute="date") | reverse %}
-  {{ macros::publication(pub=pub) }}
+    {% if pub.extra.venue_type == "conference" %}
+    {{ macros::publication(pub=pub) }}
+    {% endif %}
+  {% endfor %}
+
+  <h3 class="subsection-title">Workshops</h3>
+  {% for pub in publications.pages | sort(attribute="date") | reverse %}
+    {% if pub.extra.venue_type == "workshop" %}
+    {{ macros::publication(pub=pub) }}
+    {% endif %}
   {% endfor %}
 </section>
 
