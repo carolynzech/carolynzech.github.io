@@ -11,7 +11,7 @@ authors = [
     "Zyad Hassan",
     "Qinheping Hu",
     "Adrian Palacios",
-    "Remi Delmas",
+    "Rémi Delmas",
     "Jaisurya Nanduri",
     "Felix Klock",
     "Justus Adam",
@@ -21,5 +21,5 @@ authors = [
 conf = "VSTTE 2024"
 venue_type = "workshop"
 proceedings = "https://www.soundandcomplete.org/vstte2024.html"
-pdf = "/papers/rustverif.pdf"
+pdf = "/papers/rustverif-vstte.pdf"
 +++
