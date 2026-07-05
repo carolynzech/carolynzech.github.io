@@ -21,4 +21,5 @@ conf = "ASE 2026"
 venue_type = "conference"
 proceedings = "https://conf.researchr.org/home/ase-2026"
 pdf = "/papers/kani.pdf"
+code = "https://github.com/model-checking/kani"
 +++
