@@ -7,4 +7,4 @@ My research focuses on type systems for hardware design.
 
 Previously, I was a software engineer for the [Kani](https://github.com/model-checking/kani) model checker at Amazon.
 
-I received my ScB in Computer Science from Brown University, where I worked on Rust static analysis with [Malte Schwarzkopf](https://cs.brown.edu/people/malte/) and [Shriram Krishnamurthi](https://cs.brown.edu/~sk/) in the [ETOS](https://etos.cs.brown.edu/) group.
+I received my ScB in Computer Science from Brown University, where I developed a domain-specific language for enforcing software privacy policies as part of the [ETOS](https://etos.cs.brown.edu/) group.
