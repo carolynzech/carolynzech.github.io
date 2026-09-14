@@ -1,12 +1,12 @@
-{% macro author(name) %}
+{% component author(name: string) %}
   {%- if name == "Carolyn Zech" -%}
     <span class="pub-author pub-author--me">{{ name }}</span>
   {%- else -%}
     <span class="pub-author">{{ name }}</span>
   {%- endif -%}
-{% endmacro author %}
+{% endcomponent author %}
 
-{% macro publication(pub) %}
+{% component publication(pub) %}
 <div class="pub-entry">
   <div class="pub-title">
     {% if pub.extra.pdf %}
@@ -15,18 +15,19 @@
     {{ pub.title }}
     {% endif %}
   </div>
-  
+
   <div class="pub-authors">
     {% for name in pub.extra.authors %}
-      {{ macros::author(name=name) }}{% if not loop.last %}, {% endif %}
+      {{ <author name={name} /> }}{% if not loop.last %}, {% endif %}
     {% endfor %}
   </div>
 
   <div class="pub-meta">
     <span class="pub-conf">{{ pub.extra.conf }}</span>
-    
+
     <div class="pub-buttons">
-      <!-- {% if pub.extra.proceedings %}
+      {# Proceedings/ACM/USENIX buttons intentionally disabled:
+      {% if pub.extra.proceedings %}
         <a href="{{ pub.extra.proceedings }}" class="pub-btn pub-btn--link" target="_blank" rel="noopener">
           <i class="fa-solid fa-arrow-up-right-from-square"></i> Proceedings
         </a>
@@ -38,7 +39,8 @@
         <a href="{{ pub.extra.usenix }}" class="pub-btn pub-btn--link" target="_blank" rel="noopener">
           <i class="fa-solid fa-arrow-up-right-from-square"></i> USENIX
         </a>
-      {% endif %} -->
+      {% endif %}
+      #}
 
       {% if pub.extra.code %}
         <a href="{{ pub.extra.code }}" class="pub-btn pub-btn--link" target="_blank" rel="noopener">
@@ -48,15 +50,4 @@
     </div>
   </div>
 </div>
-{% endmacro publication %}
-
-{% macro news_entry(item) %}
-<div class="news-item">
-  <div class="news-date">
-    {{ item.date | date(format="%b %Y") }}
-  </div>
-  <div class="news-body">
-    {{ item.content | safe }}
-  </div>
-</div>
-{% endmacro news_entry %}
+{% endcomponent publication %}

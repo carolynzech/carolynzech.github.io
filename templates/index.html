@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros.html" as macros %}
 
 {% block content %}
 <section class="header">
@@ -43,7 +42,7 @@
   <h2 class="section-title">{{ news.title }}</h2>
   <div class="news-list">
     {% for item in news.pages | sort(attribute="date") | reverse %}
-    {{ macros::news_entry(item=item) }}
+    {{ <news_entry item={item} /> }}
     {% endfor %}
   </div>
 </section>
@@ -55,14 +54,14 @@
   <h3 class="subsection-title subsection-title--first">Conferences</h3>
   {% for pub in publications.pages | sort(attribute="date") | reverse %}
     {% if pub.extra.venue_type == "conference" %}
-    {{ macros::publication(pub=pub) }}
+    {{ <publication pub={pub} /> }}
     {% endif %}
   {% endfor %}
 
   <h3 class="subsection-title">Workshops</h3>
   {% for pub in publications.pages | sort(attribute="date") | reverse %}
     {% if pub.extra.venue_type == "workshop" %}
-    {{ macros::publication(pub=pub) }}
+    {{ <publication pub={pub} /> }}
     {% endif %}
   {% endfor %}
 </section>
